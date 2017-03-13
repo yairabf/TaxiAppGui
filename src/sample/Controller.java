@@ -1,14 +1,17 @@
 package sample;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.*;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.CacheHint;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.RowConstraints;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 
 
 public class Controller {
@@ -18,6 +21,8 @@ public class Controller {
     TextField widthText;
     @FXML
     TextField heightText;
+    @FXML
+    Pane windowPane;
 
     @FXML
     public void initialize() {
@@ -30,11 +35,13 @@ public class Controller {
             widthText.setVisible(false);
             createButton.setVisible(false);
             CreateGrid(h,w);
+
 //
         }
 
     });
     }
+    private Pane[][] table;
 
     private void CreateGrid(int h, int w){
         GridPane grid = new GridPane();
@@ -51,10 +58,16 @@ public class Controller {
         for(int i = 0; i < h; i++) {
             for(int j=0; j< w; j++) {
                 Pane pane = new Pane();
+                //pane.backgroundProperty().setValue(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
                 pane.getStyleClass().add("grid_cell");
                 grid.add(pane, i, j);
+                pane.setStyle("-fx-background-color: aqua");
+                //Image image = new Image()
+                pane.setBackground(new Background(new BackgroundImage()));
+                //table[i][j] = pane;
             }
         }
+        //windowPane.getChildren().add(grid);
     }
 
 }
