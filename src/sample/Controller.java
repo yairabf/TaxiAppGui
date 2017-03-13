@@ -13,8 +13,6 @@ import javafx.scene.layout.RowConstraints;
 
 public class Controller {
     @FXML
-    GridPane map;
-    @FXML
     Button createButton;
     @FXML
     TextField widthText;
@@ -32,7 +30,7 @@ public class Controller {
             widthText.setVisible(false);
             createButton.setVisible(false);
             CreateGrid(h,w);
-
+//
         }
 
     });
