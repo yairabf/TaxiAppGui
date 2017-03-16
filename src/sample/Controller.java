@@ -10,6 +10,7 @@ import javafx.geometry.Insets;
 import javafx.scene.CacheHint;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -32,7 +33,7 @@ public class Controller {
     @FXML
     TextField heightText;
     @FXML
-    VBox vBox;
+    VBox center;
     @FXML
     BorderPane borderPane;
 
@@ -50,7 +51,7 @@ public class Controller {
     private int time = 0;
 
     private GridPane grid = new GridPane();
-
+    
     private Pane[][] table;
 
     private ArrayList<Taxi> taxisList = new ArrayList<>();
@@ -263,6 +264,9 @@ public class Controller {
     }
 
     private void CreateGrid(int h, int w){
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setFitToHeight(true);
+        scrollPane.setFitToWidth(true);
         for (int i = 0; i < h; i++) {
             ColumnConstraints column = new ColumnConstraints(50);
             RowConstraints row = new RowConstraints(50);
@@ -282,7 +286,8 @@ public class Controller {
                 grid.add(pane, i, j);
             }
         }
-        vBox.getChildren().add(grid);
+        scrollPane.setContent(grid);
+        center.getChildren().add(scrollPane);
 
     }
 
