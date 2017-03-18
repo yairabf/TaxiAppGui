@@ -22,6 +22,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        GridSize gridSize = new GridSize();
+        gridSize.height = Integer.parseInt(args[0]);
+        gridSize.width = Integer.parseInt(args[1]);
         launch(args);
     }
 }

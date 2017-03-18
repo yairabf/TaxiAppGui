@@ -69,8 +69,8 @@ public class Controller {
     createButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
         @Override
         public void handle(MouseEvent event){
-            h = Integer.parseInt(heightText.getText());
-            w = Integer.parseInt(widthText.getText());
+            h = GridSize.height;
+            w = GridSize.width;
             hBox.getChildren().removeAll(createButton,heightText,widthText);
             CreateGrid(h,w);
             addField.setMaxWidth(100);
