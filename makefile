@@ -8,4 +8,4 @@ jar:
 run-jar:
 	java -jar taxi_app_gui.jar $(W) $(H)
 run:
-	java -cp bin Main
+	java -cp Main

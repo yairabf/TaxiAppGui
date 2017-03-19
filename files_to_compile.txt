@@ -1,4 +1,4 @@
-src/Controller.java
 src/Main.java
 src/GridSize.java
+src/Controller.java
 src/Taxi.java

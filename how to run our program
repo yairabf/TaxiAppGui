@@ -1,0 +1,7 @@
+In order to run our program, do the following:
+1. make compile
+2. make jar
+3. make run-jar W=<an int of your choice> H=<an integer of your choice>
+
+* <an integer of your choice> means you need to enter a number representing the amount of rows or columns.
+we have done the bonus, meaning you are able to submit any size you want for the rows and columns.

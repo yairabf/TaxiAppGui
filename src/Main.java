@@ -13,7 +13,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
-        Parent root = FXMLLoader.load(ClassLoader.getSystemClassLoader().getResource("sample.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/sample.fxml"));
         window.setTitle("TaxiApp");
         window.setScene(new Scene(root, 500, 500));
         window.show();
