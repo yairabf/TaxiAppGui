@@ -6,6 +6,6 @@ compile: bin
 jar:
 	jar cfm taxi_app_gui.jar manifest.mf -C bin . -C resources .
 run-jar:
-	java -jar taxi_app_gui.jar 10 10
+	java -jar taxi_app_gui.jar $(W) $(H)
 run:
 	java -cp bin Main
