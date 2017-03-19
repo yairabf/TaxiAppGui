@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("resources/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         window.setTitle("TaxiApp");
         window.setScene(new Scene(root, 500, 500));
         window.show();
